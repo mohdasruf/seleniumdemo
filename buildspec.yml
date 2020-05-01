@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo in prebuild
+
+  build:
+    commands:
+      - echo Entered the post_build phase...
+      - pip install --upgrade pip
+      - pip install -r requirements.txt
+      - behave --tags=datalake
