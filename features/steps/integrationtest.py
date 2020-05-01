@@ -4,15 +4,7 @@ from behave import *
 import boto3
 from configparser import ConfigParser
 
-from pythonscript.printprog import printfile
-
 use_step_matcher("re")
-
-
-@step("trigger the python script")
-def step_impl(context):
-    context.output = printfile(context.save_as)
-    print('Successfully trigger the python script')
 
 
 @given("I download the input file from S3 and place it in the test files folder")
