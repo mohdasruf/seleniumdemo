@@ -11,3 +11,4 @@ phases:
       - pip install --upgrade pip
       - pip install -r requirements.txt
       - behave --tags=ENV
+      - echo finished running the test
